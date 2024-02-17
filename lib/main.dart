@@ -76,6 +76,16 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
           onPressed: widget.onPressed, child: Icon(Icons.abc)),
+          body: Center(
+            
+            child: PhysicalModel(
+              color: Colors.blue,
+              elevation: 8.0,
+              shadowColor: Colors.deepOrange,
+              child: Container(
+                // color: Colors.amber,
+                height: 100,width: 100,),
+            )),
     );
   }
 }
