@@ -20,9 +20,12 @@ List<CertificateModel> certificateList = [
     organization: 'Coursera',
     date: 'AUG 2023',
     skills: 'Flutter . Dart',
-    credential:  'https://www.coursera.org/account/accomplishments/certificate/HQ4LFHSF4LKZ',
+    credential:  '',
   ),
-  
+ 
+
+
+
 
 
 
