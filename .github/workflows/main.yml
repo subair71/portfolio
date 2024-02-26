@@ -28,8 +28,8 @@ jobs:
       # (3)
       - name: Make copy of artifacts
         run: |
-          chmod u+x "${GITHUB_WORKSPACE}/createandcopytofolder.sh"
-          bash "${GITHUB_WORKSPACE}/createandcopytofolder.sh"
+          chmod u+x "${GITHUB_WORKSPACE}/artifacts/web/createandcopytofolder.sh"
+          bash "${GITHUB_WORKSPACE}/artifacts/web/createandcopytofolder.sh"
 
       # (4)
       - uses: stefanzweifel/git-auto-commit-action@v4
