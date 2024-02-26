@@ -14,7 +14,7 @@ List<Project> projectList = [
     'https://play.google.com/store/apps/details?id=com.integra.iiscopenday2020',
   ),
   Project(
-    'UPPDS',
+    'UPPDS APP',
     'Car Control Dashboard is a user-friendly mobile application built using Flutter and powered by GetX for efficient state management. Enjoy a modern and intuitive design that adapts to various screen sizes, Interact with dynamic car controls, including speed, steering, and temperature. Realistic animations enhance the visual appeal, making it feel like you are controlling a real car!',
     'assets/images/car.png',
     'https://github.com/Hamad-Anwar/Car-Controller-Getx-Flutter',
