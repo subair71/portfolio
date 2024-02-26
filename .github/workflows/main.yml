@@ -25,15 +25,14 @@ jobs:
       - name: 🏭 Build Web Application
         run: flutter build web --release
 
-      # (3)
-      - name: Make copy of artifacts
-        run: |
-          sudo chmod u+x "${GITHUB_WORKSPACE}/artifacts/web/createandcopytofolder.sh"
-          sudo bash "${GITHUB_WORKSPACE}/artifacts/web/createandcopytofolder.sh"
-        tag: v1.0.${{ github.run_number }}
-        token: ${{ secrets.TOKEN }}
+      # # (3)
+      # - name: Make copy of artifacts
+      #   run: |
+      #     sudo chmod u+x "${GITHUB_WORKSPACE}/artifacts/web/createandcopytofolder.sh"
+      #     sudo bash "${GITHUB_WORKSPACE}/artifacts/web/createandcopytofolder.sh"
+      #   token: ${{ secrets.TOKEN }}
 
-      # (4)
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Commit the artifacts.
+      # # (4)
+      # - uses: stefanzweifel/git-auto-commit-action@v4
+      #   with:
+      #     commit_message: Commit the artifacts.
