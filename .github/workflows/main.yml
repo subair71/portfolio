@@ -30,6 +30,8 @@ jobs:
         run: |
           sudo chmod u+x "${GITHUB_WORKSPACE}/artifacts/web/createandcopytofolder.sh"
           sudo bash "${GITHUB_WORKSPACE}/artifacts/web/createandcopytofolder.sh"
+        tag: v1.0.${{ github.run_number }}
+        token: ${{ secrets.TOKEN }}
 
       # (4)
       - uses: stefanzweifel/git-auto-commit-action@v4
