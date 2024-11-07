@@ -24,37 +24,50 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home: HomeScreen()
+      home: SplashView()
     );
   }
 }
 
 
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Screen Title'),
-      ),
-      body: Center(
-        child: Expanded(
-          child: Column(
-            children: [
-              Container(
-                width:6,
-                child: Text(
-                  'Welcome to the Home Screen!',
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-
+// class HomeScreen extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     // Using LayoutBuilder to make the layout responsive based on screen size
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('Home Screen Title'),
+//       ),
+//       body: LayoutBuilder(
+//         builder: (context, constraints) {
+//           // Check screen width for mobile (you can adjust the threshold as needed)
+//           if (constraints.maxWidth < 600) {
+//             // For smaller screen sizes (mobile), use RenderFlex layout
+//             return Center(
+//               child: Container(
+//                 padding: EdgeInsets.all(16),
+//                 child: Text(
+//                   'Welcome to the Home Screen!',
+//                   style: TextStyle(fontSize: 24),
+//                 ),
+//               ),
+//             );
+//           } else {
+//             // For larger screen sizes (tablet, desktop), you can apply a different layout
+//             return Center(
+//               child: Container(
+//                 width: 600,  // Max width for larger screens
+//                 padding: EdgeInsets.all(16),
+//                 child: Text(
+//                   'Welcome to the Home Screen!',
+//                   style: TextStyle(fontSize: 24),
+//                 ),
+//               ),
+//             );
+//           }
+//         },
+//       ),
+//     );
+//   }
+// }
 
