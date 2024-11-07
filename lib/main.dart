@@ -19,8 +19,8 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.openSansTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: const Color.fromARGB(255, 11, 11, 11),)
             .copyWith(
-          bodyText1: const TextStyle(color: bodyTextColor),
-          bodyText2: const TextStyle(color: bodyTextColor),
+          bodyLarge: const TextStyle(color: bodyTextColor),
+          bodyMedium: const TextStyle(color: bodyTextColor),
         ),
       ),
 
