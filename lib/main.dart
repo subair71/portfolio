@@ -38,11 +38,17 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Home Screen Title'),
       ),
       body: Center(
-        child: Container(
-          width:6,
-          child: Text(
-            'Welcome to the Home Screen!',
-            style: TextStyle(fontSize: 24),
+        child: Expanded(
+          child: Column(
+            children: [
+              Container(
+                width:6,
+                child: Text(
+                  'Welcome to the Home Screen!',
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ],
           ),
         ),
       ),
