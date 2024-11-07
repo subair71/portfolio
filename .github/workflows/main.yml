@@ -19,12 +19,12 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Run tests
-        run: flutter test
+      # - name: Run tests
+      #   run: flutter test
 
       - name: Run iOS test
         run: flutter test --device-id="iPhone 12"
-        
+
       - name: Run Android test
         run: flutter test --device-id="Pixel 4"
 
