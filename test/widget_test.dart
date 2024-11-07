@@ -1,30 +1,22 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility that Flutter provides. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:portfolio/main.dart';
+import 'package:portfolio/view/home/home.dart';
+import 'package:portfolio/view/intro/introduction.dart'; // Import the Introduction widget
+import 'package:portfolio/view/main/main_view.dart';
+import 'package:portfolio/view/projects/project_view.dart'; // Import ProjectsView widget
+import 'package:portfolio/view/certifications/certifications.dart'; // Import Certifications widget
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+  testWidgets('HomePage screen opens and displays MainView with pages', (tester) async {
+    // Build the widget tree for HomePage
+    await tester.pumpWidget(MaterialApp(home: const HomePage()));
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify that MainView is loaded (i.e., HomePage is displayed)
+    expect(find.byType(MainView), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify that the child pages (Introduction, ProjectsView, Certifications) are present
+    expect(find.byType(Introduction), findsOneWidget);
+    expect(find.byType(ProjectsView), findsOneWidget);
+    expect(find.byType(Certifications), findsOneWidget);
   });
 }
