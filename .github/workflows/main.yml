@@ -26,7 +26,7 @@ jobs:
       #   run: flutter test --device-id="iPhone 12"
 
       - name: Run Android test
-        run: flutter test --device-id="Nexus 10"
+        run: flutter test --device-id="Pixel 4"
 
       # - name: Run Android test (Tablet - Nexus 10)
       #   run: |

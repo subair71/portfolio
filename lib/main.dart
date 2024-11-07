@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          width:10000,
+          width:60000000,
           child: Text(
             'Welcome to the Home Screen!',
             style: TextStyle(fontSize: 24),
