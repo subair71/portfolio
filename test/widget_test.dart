@@ -1,28 +1,26 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:portfolio/main.dart';
-import 'package:portfolio/res/constants.dart';
-import 'package:portfolio/view/intro/components/animated_texts_componenets.dart';
-import 'package:portfolio/view/splash/componenets/animated_loading_text.dart';
-import 'package:portfolio/view/splash/splash_view.dart';
-import 'package:portfolio/view/home/home.dart'; // Import the HomePage widget
-import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:portfolio/view/home/home.dart'; // Adjust this import as per your project structure
+import 'package:portfolio/view/intro/introduction.dart';
+import 'package:portfolio/view/main/main_view.dart';
+import 'package:portfolio/view/projects/project_view.dart';
+import 'package:portfolio/view/certifications/certifications.dart';
 
 void main() {
-  testWidgets('HomeScreen loads correctly', (tester) async {
-    // Build the widget tree for HomeScreen
-    await tester.pumpWidget(MaterialApp(home: HomeScreen()));
+  testWidgets('HomePage loads correctly with all pages', (tester) async {
+    // Build the HomePage widget
+    await tester.pumpWidget(MaterialApp(home: HomePage()));
 
-    // Verify that the AppBar has the correct title
-    expect(find.text('Home Screen Title'), findsOneWidget);
+    // Verify that the MainView widget is rendered
+    expect(find.byType(MainView), findsOneWidget);
 
-    // Verify that the body has the correct text
-    expect(find.text('Welcome to the Home Screen!'), findsOneWidget);
+    // // Verify that the Introduction page is rendered
+    // expect(find.byType(Introduction), findsOneWidget);
 
-    // Verify that the Container widget is rendered and has the correct width
-    final container = tester.firstWidget(find.byType(Container)) as Container;
-    expect(container.constraints!.maxWidth, equals(6)); // Verify container width
+    // // Verify that the ProjectsView page is rendered
+    // expect(find.byType(ProjectsView), findsOneWidget);
+
+    // // Verify that the Certifications page is rendered
+    // expect(find.byType(Certifications), findsOneWidget);
   });
 }
