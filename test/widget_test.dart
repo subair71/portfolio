@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('HomeScreen has title and body text', (tester) async {
+  testWidgets('HomeScreen loads correctly', (tester) async {
     // Build the widget tree for HomeScreen
     await tester.pumpWidget(MaterialApp(home: HomeScreen()));
 
@@ -21,8 +21,8 @@ void main() {
     // Verify that the body has the correct text
     expect(find.text('Welcome to the Home Screen!'), findsOneWidget);
 
-    // Verify that the HomeScreen is displayed with the correct title in the AppBar
-    final appBar = find.byType(AppBar);
-    expect(appBar, findsOneWidget);
+    // Verify that the Container widget is rendered and has the correct width
+    final container = tester.firstWidget(find.byType(Container)) as Container;
+    expect(container.constraints!.maxWidth, equals(6)); // Verify container width
   });
 }
