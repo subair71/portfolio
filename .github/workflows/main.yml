@@ -25,8 +25,7 @@ jobs:
       # - name: Run iOS test
       #   run: flutter test --device-id="iPhone 12"
 
-      - name: Run Android test
-        run: flutter test --device-id="Nexus 10"
+      
 
       # - name: Run Android test (Tablet - Nexus 10)
       #   run: |
@@ -35,6 +34,9 @@ jobs:
 
       - name: 🌍 Enable Web
         run: flutter config --enable-web
+
+      - name: Run Web test
+        run: flutter test --device-id="chrome"
 
       - name: 📦 Get packages
         run: flutter pub get
